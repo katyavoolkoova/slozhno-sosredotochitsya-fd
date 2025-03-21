@@ -1,3 +1,22 @@
+
+:root {
+  --main-font: 'IBM Plex mono';
+  --bg-color: #000028;
+  --header-color: #FF0070;
+  --accent-color: #FF0070;
+  --heading-text-color: #000028;
+  --button-hover: #FF007066;
+  --text-color: #F1B2CE;
+  --title-text-color: #DB00FF;
+  --title2-text-color: #FF0070;
+  --bg-link-color: transparent;
+  --font-size: 18px;
+  --bold-fw: 700;
+  --normal-fw: 400;
+  --bg-image: url(../images/cover-image-dark.png);
+  
+}
+
 /*
   Переменные для вашего проекта
   и их переопределение под различные устройства
