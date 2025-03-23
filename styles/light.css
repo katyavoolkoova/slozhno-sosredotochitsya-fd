@@ -47,14 +47,15 @@
   
   }
 
+  .decoration {
+  
+    display: none;
+  }
   
 }
 
 
 
-.theme-light .decoration {
-  
-    display: none;
-  }
+
   /* Вам также нужно будет написать ряд подобных селекторов */
 

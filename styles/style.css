@@ -8,23 +8,22 @@
   gap: 40px;
   font-family: var(--main-font, monospace);
   padding-inline: 10px;
-  position: relative;
-
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  
 }
+
 
 .header {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 55px;
   position: relative;
-  align-items: start;
-  padding-block-start: 75px;
+  padding-block: 75px 66px;
+  max-height: 100vh;
+  min-height: 668px;
 }
 
-.cover {
-  min-block-size: 100vh;
-}
+
+
 
 .decorated-zone {
   position: relative;
@@ -133,10 +132,12 @@
   font-weight: var(--bold-fw);
   font-size: 18px;
   line-height: 23px;
+  justify-content: start;
 }
 
 .description_text {
   padding-right: 55px;
+  
 }
 
 .title-decor {
@@ -149,6 +150,7 @@
 .content {
   display: grid;
   gap: 50px;
+ 
 }
 
 .content-section {
@@ -178,18 +180,19 @@
   font-weight: var(--bold-fw);
   font-size: 18px;
   line-height: 23.4px;
-  letter-spacing: 0%;
 }
 
 .content_paragraph {
   font-weight: var(--normal-fw);
   font-size: 18px;
   line-height: 23.4px;
-  letter-spacing: 0%;
+
   color: var(--text-color);
 }
 
-
+.block-how .header_title {
+  font-weight: var(--normal-fw);
+}
 
 .link_effects {
   text-decoration: none;
@@ -197,9 +200,7 @@
 }
 
 .link_effects:hover {
-  outline: none;
-  text-decoration: underline;
-  color: var(--text-color);
+  border-block-end: 1px solid var(--text-color);
   cursor: pointer;
 }
 
@@ -237,13 +238,16 @@
 }
 
 .footer {
-  padding-block-start: 285px;
+  max-height: 100vh;
+  min-height: 668px;
+  
+  place-content: center;
+  place-items: center;
 }
 
 @media (width >= 768px) {
   .page {
     gap: 60px;
-    padding-inline-end: 20px;
   }
 
   .decorated-zone::before {
@@ -328,29 +332,32 @@
   }
 
   .footer {
-    padding-block: 463px;
-    padding-inline: 194px;
+    min-block-size: 1024px;
   }
 }
 
 @media (width >= 1024px) {
   .page {
-    padding-inline: 10px;
+    padding-inline: 0 20px;
   }
 
   .header {
-    padding-block: 0 50px;
-    gap: 114px;
+    padding-block-start: 0;
+    gap: 130px;
   }
 
-  .heading {
+  .header .heading {
+  margin-block-start: 135px;
     align-self: center;
   }
+
+  
 
   .header__theme-menu {
     align-items: start;
     margin-block-start: 20px;
     justify-self: center;
+    
   }
 
   .header__theme-menu-list {
@@ -358,11 +365,19 @@
   }
 
   .heading_description {
-    max-inline-size: 491px;
+    max-width: 491px;
+    max-height: 71px;
   }
 
   .description_text {
+  justify-self: start;
     padding-right: 0;
+  }
+
+  .content-section-why,
+  .content-section-how {
+    
+    grid-template-columns: 1fr 2.06fr;
   }
 
   .title-why,
@@ -375,4 +390,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  .footer {
+  min-block-size: 768px;
+}
 }
