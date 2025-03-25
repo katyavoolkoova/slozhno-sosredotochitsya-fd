@@ -18,7 +18,7 @@
   gap: 55px;
   position: relative;
   padding-block: 75px 66px;
-  max-height: 100vh;
+  height: 100vh;
   min-height: 668px;
 }
 
@@ -106,7 +106,7 @@
   text-transform: lowercase;
   cursor: pointer;
   padding-block: 1.5px;
-  padding-inline: 13px;
+  padding-inline: 15px;
   border: 1px solid var(--bg-link-color);
 }
 
@@ -136,7 +136,7 @@
 }
 
 .description_text {
-  padding-right: 55px;
+  padding-right: 50px;
   
 }
 
@@ -238,11 +238,12 @@
 }
 
 .footer {
-  max-height: 100vh;
+  height: 100vh;
   min-height: 668px;
   
   place-content: center;
   place-items: center;
+  margin-block-end: -80px;
 }
 
 @media (width >= 768px) {
@@ -267,6 +268,7 @@
   }
 
   .header {
+    min-height: 1024px;
     gap: 157px;
     padding-block: 192px 183px;
     padding-inline: 0 10px;
@@ -332,18 +334,18 @@
   }
 
   .footer {
-    min-block-size: 1024px;
+    min-height: 1024px;
+    margin-block-end: -120px;
   }
 }
 
 @media (width >= 1024px) {
-  .page {
-    padding-inline: 0 20px;
-  }
+  
 
   .header {
+    min-height: 768px;
     padding-block-start: 0;
-    gap: 130px;
+    gap: 140px;
   }
 
   .header .heading {
@@ -355,9 +357,13 @@
 
   .header__theme-menu {
     align-items: start;
-    margin-block-start: 20px;
+    margin-block-start: 19px;
     justify-self: center;
-    
+    margin-inline-start: 10px;
+  }
+
+  .header__theme-menu-button {
+    padding-inline: 16px;
   }
 
   .header__theme-menu-list {
@@ -365,6 +371,7 @@
   }
 
   .heading_description {
+    margin-block-start: -24px;
     max-width: 491px;
     max-height: 71px;
   }
@@ -392,6 +399,6 @@
   }
 
   .footer {
-  min-block-size: 768px;
+  min-height: 768px;
 }
 }
