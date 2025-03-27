@@ -59,10 +59,12 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  
 }
 
 .header__theme-menu-item {
   color: var(--header-color);
+  
 }
 
 .heading {
@@ -71,6 +73,10 @@
   font-weight: var(--bold-fw);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
+  
+}
+
+.header .heading {
   text-shadow: 4px 4px 0px var(--accent-color);
 }
 
@@ -80,7 +86,7 @@
   font-size: 18px;
   line-height: 25px;
   align-items: center;
-
+  display: var(--display);
   position: absolute;
   justify-self: end;
   inset-inline-end: 10px;
@@ -105,7 +111,7 @@
 
   text-transform: lowercase;
   cursor: pointer;
-  padding-block: 1.5px;
+  padding-block: 1.3px;
   padding-inline: 15px;
   border: 1px solid var(--bg-link-color);
 }
@@ -133,6 +139,7 @@
   font-size: 18px;
   line-height: 23px;
   justify-content: start;
+  max-height: 117px;
 }
 
 .description_text {
@@ -143,6 +150,7 @@
 .title-decor {
   background-color: var(--accent-color);
   color: var(--heading-text-color);
+  
 }
 
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
@@ -241,9 +249,14 @@
   height: 100vh;
   min-height: 668px;
   
+
   place-content: center;
   place-items: center;
   margin-block-end: -80px;
+}
+
+.footer .heading {
+  text-shadow: 2px 2px 0px var(--accent-color);
 }
 
 @media (width >= 768px) {
@@ -269,13 +282,19 @@
 
   .header {
     min-height: 1024px;
-    gap: 157px;
-    padding-block: 192px 183px;
+    gap: 161px;
+    padding-block: 188px 183px;
     padding-inline: 0 10px;
+  }
+
+  .header__theme-menu-button {
+    font-size: 18px;
+  
   }
 
   .heading {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    padding-block-start: 5px;
   }
 
   .header .heading {
@@ -349,7 +368,7 @@
   }
 
   .header .heading {
-  margin-block-start: 135px;
+  margin-block-start: 130px;
     align-self: center;
   }
 
@@ -357,13 +376,18 @@
 
   .header__theme-menu {
     align-items: start;
-    margin-block-start: 19px;
+    margin-block-start: 20px;
     justify-self: center;
     margin-inline-start: 10px;
   }
 
   .header__theme-menu-button {
-    padding-inline: 16px;
+    padding-block: 0;
+  padding-inline: 12px;
+    
+    font-size: 18px;
+    
+  
   }
 
   .header__theme-menu-list {

@@ -14,10 +14,7 @@
   --bold-fw: 700;
   --normal-fw: 400;
   --bg-image: url(../images/cover-image-dark.png);
-  
+  --display: block;
 }
 
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+
