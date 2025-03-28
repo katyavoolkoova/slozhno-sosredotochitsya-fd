@@ -139,7 +139,7 @@
   font-size: 18px;
   line-height: 23px;
   justify-content: start;
-  max-height: 117px;
+  height: fit-content;
 }
 
 .description_text {
@@ -397,7 +397,7 @@
   .heading_description {
     margin-block-start: -24px;
     max-width: 491px;
-    max-height: 71px;
+    height: fit-content;
   }
 
   .description_text {
